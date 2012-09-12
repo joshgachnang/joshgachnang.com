@@ -1,0 +1,9 @@
+{% extends "site_base.html" %}
+
+{% block title %}{{ post.title }} | Josh Gachnang{% endblock %}
+
+{% block body %}
+<h2>{{ post.title }}</h2>
+{{ post.content }}
+
+{% endblock %}

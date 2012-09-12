@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>{% block title %}Josh Gachnang{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="{{ description }}" />
+<meta name="keywords" content="{{ keywords }}" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+<!-- Loading Google Web fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+
+<!-- CSS Files -->
+<link href="{{ STATIC_URL }}css/themeforest/reset.css" rel="stylesheet" type="text/css" />
+<!-- <link href="{{ STATIC_URL }}css/themeforest/style.css" rel="stylesheet" type="text/css"  id="color" /> -->
+<link href="{{ STATIC_URL }}css/themeforest/red_style.css" rel="stylesheet" type="text/css"  id="color" />
+<link href="{{ STATIC_URL }}css/themeforest/typography.css" rel="stylesheet" type="text/css"  id="customFont"/>
+<link href="{{ STATIC_URL }}css/themeforest/arial_content.css" rel="stylesheet" type="text/css"  id="contentfont"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/themeforest/prettyPhoto.css" type="text/css" />
+<link href="{{ STATIC_URL }}css/themeforest/nivo.slider.css" rel="stylesheet" type="text/css" />
+
+
+<!-- include jQuery library -->
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.min.js"></script>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.livetweet.js"></script>
+
+<!--form validation these scripts must for this kind of validation-->
+<script src="{{ STATIC_URL }}js/jquery.validate.js" type="text/javascript"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/respond.min.js"></script>
+
+<!-- Portfolio and Hover Image adipoli Script -->
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.adipoli.min.js"></script>
+
+<!-- slider script -->
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.nivo.slider.js"></script>
+
+<!-- Resume Chart Script -->
+<!-- <script src="{{ STATIC_URL }}js/raphael.js" type="text/javascript"></script> -->
+<!-- <script src="{{ STATIC_URL }}js/init.js" type="text/javascript"></script> -->
+
+<!-- include custom js -->
+<script type="text/javascript" src="{{ STATIC_URL }}js/custom.js"></script>
+
+
+<!-- settings-panel Demo Purpose Script and CSS-->
+<link href="{{ STATIC_URL }}css/themeforest/settings.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{{ STATIC_URL }}js/settings.js"></script>
+{% block head %}{% endblock %}
+
+</head>
+<body>
+<!-- wrapper -->
+<div class="clr" id="top-head">&nbsp;</div>
+<div id="container">
+
+    <!--header -->
+    <div id="header" >
+        <div class="logo-bg" >
+        <!--logo -->
+<!--             <div class="logo"><img src="{{ STATIC_URL }}images/themeforest/logo.png" alt="Logo" width="202" height="52" border="0"  id="logo" /></div> -->
+            <!--head right -->
+            <div class="right">
+
+                <!--// Navigation //-->
+                <div class="menu_nav">
+                    <div id="nav-wrap">
+                        <ul class="arrowunderline" id="nav">
+                        <li class="home" id="selected">Home</li>
+                        <li class="about">About</li>
+                        <li class="resume">Resume</li>
+                        <li class="services">Services</li>
+                        <li class="portfolio">Portfolio</li>
+                        <li class="contact">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!--// Navigation End //-->
+
+            </div>
+            <!--// -head right end //-->
+        </div>
+        <!--// logo bg end //-->
+    </div>
+    <!--header end -->
+    <!-- Start Body -->
+    <!--Card  -->
+    <div id="content">
+        <div class="card-pattern">
+        {% include "home.html" %}
+        {% include "about.html" %}
+        {% include "resume.html" %}
+        {% include "services.html" %}
+        {% include "contact.html" %}
+        {% block body %}
+        {% endblock %}
+        </div> <!--End card-pattern-->
+    <!--</div> --><!--End content-->
+    <!-- End Body -->
+<!--</div> --><!--Container End-->
+<!--//clr end //-->
+          <div class="clr"></div>
+        <!--</div>--><!-- contact end -->
+        <div class="clr"></div>
+      <!--</div>--><!--card pattern end -->
+      <div class="clr "></div>
+  </div>          <!--content end -->   
+          <div class="bottom-shade"></div>
+</div>  <!--Container / wrapper end --> 
+
+
+<!-- Sidebar -->
+<!--<h3>Categories</h3>
+<ul>
+{% for category in categories %}
+<li><a href="/category/{{ category.name }}/">{{ category.name }}</a></li>
+{% endfor %}
+</ul>
+<h3>Recent Posts</h3>
+<ul>
+{% for post in recent_posts %}
+
+<li><a href="/p/{{ post.url }}/">{{ post.title }}</a></li>
+{% endfor %}
+</ul>-->
+<!-- End Sidebar -->
+<footer>
+{% block footer %}
+<div id="footer"><h6>Copyright Josh Gachnang. <a href="http://github.com/pcsforeducation/joshgachnang">Source available on GitHub.</a></h6></div>
+{% endblock %}
+</footer>
+</body>
+</html>

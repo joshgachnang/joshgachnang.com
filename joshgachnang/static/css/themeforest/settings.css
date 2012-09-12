@@ -1,0 +1,110 @@
+/* CSS Document */
+
+ /* Settings panel Styles */
+#cfont,#confont{width:161px; height:30px; line-height:30px; padding:3px; margin-left:84px; font: 12px Arial, Helvetica, sans-serif; color:#666;}
+.settings-panel { position: fixed; top:40px; left: 0px; width: 270px; background-color: #fff; border: 1px solid #ebeff0; padding: 2px 5px 10px; margin-left: -282px; z-index: 99999; }
+.settings-panel .open-buttton { display: block; width: 32px; height: 32px; background: url(../images/services-icon.png) center center #fff no-repeat; position: absolute; top: 184px; right: -37px; cursor: pointer; padding: 3px 2px 2px; border: 1px solid #ebeff0; border-left: none; }
+.settings-panel h5 { line-height: 12px; margin: 0px 0px 8px 0px; padding: 0px; color: #555; }
+.settings-panel .patterns , .settings-panel .c_patterns  { overflow: hidden; margin: 0px 0px 0px -6px; padding: 0px 0px 3px 6px; }
+.settings-panel .patterns li, .settings-panel .c_patterns li { width: 35px; height: 35px; border: 1px solid #e1e4e5; float: left; margin: 0px 0px 5px 8px; cursor: pointer; }
+
+.settings-panel .patterns li.bgs1 { background: url(../images/patterns/45degreee_fabric.png); }
+.settings-panel .patterns li.bgs2 { background: url(../images/patterns/bgnoise_lg.png); }
+.settings-panel .patterns li.bgs3 { background: url(../images/patterns/gplaypattern.png); }
+.settings-panel .patterns li.bgs4 { background: url(../images/patterns/bright_squares.png); }
+.settings-panel .patterns li.bgs5 { background: url(../images/patterns/hexellence.png); }
+.settings-panel .patterns li.bgs6 { background: url(../images/patterns/cork.png); }
+.settings-panel .patterns li.bgs7 { background: url(../images/patterns/rockywall.png); }
+.settings-panel .patterns li.bgs8 { background: url(../images/patterns/lghtmesh.png); }
+.settings-panel .patterns li.bgs9 { background: url(../images/patterns/flowertrail.png); }
+.settings-panel .patterns li.bgs10 { background: url(../images/patterns/light_wool.png); }
+.settings-panel .patterns li.bgs11 { background: url(../images/patterns/diagonal-noise.png); }
+.settings-panel .patterns li.bgs12 { background: url(../images/patterns/fabric_plaid.png); }
+.settings-panel .patterns li.bgs13 { background: url(../images/patterns/lil_fiber.png); }
+.settings-panel .patterns li.bgs14 { background: url(../images/patterns/xv.png); }
+.settings-panel .patterns li.bgs15 { background: url(../images/patterns/light_alu.png); }
+.settings-panel .patterns li.bgs16 { background: url(../images/patterns/light_honeycomb.png); }
+.settings-panel .patterns li.bgs17 { background: url(../images/patterns/little_pluses.png); }
+.settings-panel .patterns li.bgs18 { background: url(../images/patterns/project_papper.png); }
+.settings-panel .patterns li.bgs19 { background: url(../images/patterns/stacked_circles.png); }
+.settings-panel .patterns li.bgs20 { background: url(../images/patterns/ravenna.png); }
+.settings-panel .patterns li.bgs21 { background: url(../images/patterns/roughcloth.png); }
+.settings-panel .patterns li.bgs22 { background: url(../images/patterns/scribble_light.png); }
+.settings-panel .patterns li.bgs23 { background: url(../images/patterns/small_tiles.png); }
+.settings-panel .patterns li.bgs24 { background: url(../images/patterns/soft_wallpaper.png); }
+.settings-panel .patterns li.bgs25 { background: url(../images/patterns/square_bg.png); }
+.settings-panel .patterns li.bgs26 { background: url(../images/patterns/subtle_freckles.png); }
+.settings-panel .patterns li.bgs27 { background: url(../images/patterns/gridme.png); }
+.settings-panel .patterns li.bgs28 { background: url(../images/patterns/subtle_stripes.png);}
+.settings-panel .patterns li.bgs29 { background: url(../images/patterns/tiny_grid.png);}
+.settings-panel .patterns li.bgs30 { background: url(../images/patterns/smooth_wall.png);}
+.settings-panel .patterns li.bgs31 { background: url(../images/patterns/grunge_wall.png); }
+.settings-panel .patterns li.bgs32 { background: url(../images/patterns/concrete_wall_2.png); }
+.settings-panel .patterns li.bgs33 { 	background-color:#e7e7e7; }
+.settings-panel .patterns li.bgs34 { background: url(../images/patterns/triangles_pattern.png); }
+.settings-panel .patterns li.bgs35 { background: url(../images/patterns/tex2res3.png); }
+
+
+
+.settings-panel .patterns li.card_bgs1 { background: url(../images/patterns/cards/45degreee_fabric.png); }
+.settings-panel .patterns li.card_bgs2 { background: url(../images/patterns/cards/bgnoise_lg.png); }
+.settings-panel .patterns li.card_bgs3 { background: url(../images/patterns/cards/gplaypattern.png); }
+.settings-panel .patterns li.card_bgs4 { background: url(../images/patterns/cards/bright_squares.png); }
+.settings-panel .patterns li.card_bgs5 { background: url(../images/patterns/cards/hexellence.png); }
+.settings-panel .patterns li.card_bgs6 { background: url(../images/patterns/cards/cork.png); }
+.settings-panel .patterns li.card_bgs7 { background: url(../images/patterns/cards/rockywall.png); }
+.settings-panel .patterns li.card_bgs8 { background: url(../images/patterns/cards/lghtmesh.png); }
+.settings-panel .patterns li.card_bgs9 { background: url(../images/patterns/cards/flowertrail.png); }
+.settings-panel .patterns li.card_bgs10 { background: url(../images/patterns/cards/light_wool.png); }
+.settings-panel .patterns li.card_bgs11 { background: url(../images/patterns/cards/diagonal-noise.png); }
+.settings-panel .patterns li.card_bgs12 { background: url(../images/patterns/cards/fabric_plaid.png); }
+.settings-panel .patterns li.card_bgs13 { background: url(../images/patterns/cards/lil_fiber.png); }
+.settings-panel .patterns li.card_bgs14 { background: url(../images/patterns/cards/xv.png); }
+.settings-panel .patterns li.card_bgs15 { background: url(../images/patterns/cards/light_alu.png); }
+.settings-panel .patterns li.card_bgs16 { background: url(../images/patterns/cards/light_honeycomb.png); }
+.settings-panel .patterns li.card_bgs17 { background: url(../images/patterns/cards/little_pluses.png); }
+.settings-panel .patterns li.card_bgs18 { background: url(../images/patterns/cards/project_papper.png); }
+.settings-panel .patterns li.card_bgs19 { background: url(../images/patterns/cards/stacked_circles.png); }
+.settings-panel .patterns li.card_bgs20 { background: url(../images/patterns/cards/ravenna.png); }
+.settings-panel .patterns li.card_bgs21 { background: url(../images/patterns/cards/roughcloth.png); }
+.settings-panel .patterns li.card_bgs22 { background: url(../images/patterns/cards/scribble_light.png); }
+.settings-panel .patterns li.card_bgs23 { background: url(../images/patterns/cards/small_tiles.png); }
+.settings-panel .patterns li.card_bgs24 { background: url(../images/patterns/cards/soft_wallpaper.png); }
+.settings-panel .patterns li.card_bgs25 { background: url(../images/patterns/cards/square_bg.png); }
+.settings-panel .patterns li.card_bgs26 { background: url(../images/patterns/cards/subtle_freckles.png); }
+.settings-panel .patterns li.card_bgs28 { background: url(../images/patterns/cards/subtle_stripes.png);}
+.settings-panel .patterns li.card_bgs29 { background: url(../images/patterns/cards/tiny_grid.png);}
+.settings-panel .patterns li.card_bgs30 { background: url(../images/patterns/cards/textured_stripes.png);}
+.settings-panel .patterns li.card_bgs31 { background: url(../images/patterns/cards/extra_clean_paper.png); }
+.settings-panel .patterns li.card_bgs32 { background: url(../images/patterns/cards/tex2res2.png); }
+.settings-panel .patterns li.card_bgs33 { background: url(../images/patterns/cards/egg_shell.png); }
+.settings-panel .patterns li.card_bgs34 { background: url(../images/patterns/cards/redox_01.png); }
+.settings-panel .patterns li.card_bgs35 { background: url(../images/patterns/cards/tex2res3.png); }
+.settings-panel .patterns li.card_bgs39 { background: url(../images/patterns/cards/frenchstucco.png); }
+.settings-panel .patterns li.card_bgs36 { background: url(../images/patterns/cards/wall4.png); }
+.settings-panel .patterns li.card_bgs40 { background: url(../images/patterns/cards/grilled.png); }
+
+.settings-panel .c_patterns li.c1 { 	background-color:#1a416b;  }
+.settings-panel .c_patterns li.c2 { 	background-color:#2caeb5;  }
+.settings-panel .c_patterns li.c3 { 	background-color:#719430;  }
+.settings-panel .c_patterns li.c4 { 	background-color:#999999;  }
+.settings-panel .c_patterns li.c5 { 	background-color:#8eccb3;  }
+.settings-panel .c_patterns li.c6 { 	background-color:#aec71e;  }
+.settings-panel .c_patterns li.c7 { 	background-color:#435960;  }
+.settings-panel .c_patterns li.c8 { 	background-color:#f3c432;  }
+.settings-panel .c_patterns li.c9 { 	background-color:#eb5f96;  }
+.settings-panel .c_patterns li.c10 { 	background-color:#de5a49;  }
+.settings-panel .c_patterns li.c11{ 	background-color:#43605b;  }
+settings-panel .c_patterns li.default{ 	background-color:#74c676;  }
+
+
+.settings-panel  h5{ 
+	font-size:14px;
+	color:#61b1ca;
+	 font-weight:600;
+	 padding: 0px 3px 0px 60px;
+}
+
+.settings-panel { 
+	font-size:10x;
+}

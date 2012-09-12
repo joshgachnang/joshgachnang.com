@@ -1,0 +1,39 @@
+body {
+font-family:Arial, Helvetica, sans-serif;
+font-size: 13px;
+line-height: 22px;
+color:#777777;
+font-weight:400;
+}
+
+
+h6,  {font-family: 'open sans Light', sans-serif;
+}
+h1, h2, h3,h4 {font-family: 'IM Fell DW Pica', serif;}
+
+h1 {font-size:55px; color:#fbfbfb; text-transform:uppercase;}
+h2 {font-size:21px; font-weight:600; color:#727272; text-shadow: 1px 1px 1px #ffffff;}
+h3 {font-size:18px; font-weight:600; color:#727272; }
+h4 {font-size:18px; font-weight:600; color:#727272; }
+h5	{font-size:14px; font-weight:600; color:#5db95f; }
+h5 span {color:#727272;}
+li span {font-size:14px; font-weight:600; color:#727272; }
+
+h6  {font-family: 'open sans Light', sans-serif; 
+font-size:21px;  color:#919090; line-height:25px;}
+h6 span { color:#000000;font-family: 'open sans', sans-serif;}
+
+
+p{
+font-family:Arial, Helvetica, sans-serif;
+text-align:justify; 
+color:#777777;
+line-height: 22px;}
+
+/* home page Heading */ 
+	
+	.tag { font-size:72px;font-family: 'IM Fell DW Pica', serif;}
+	
+	.tag  span {font-size:30px;}
+	
+	.sub-tag { font-size:60px;font-family: 'IM Fell DW Pica', serif;}

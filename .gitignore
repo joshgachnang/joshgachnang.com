@@ -1,0 +1,13 @@
+# Standard Python files
+*.pyc
+/media/*.png
+# Editor files
+*~
+*.kate-swp
+
+# Virtualenv files
+bin/
+build/
+lib/
+local/
+include/
