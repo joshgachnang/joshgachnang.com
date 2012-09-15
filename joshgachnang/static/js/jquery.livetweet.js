@@ -8,7 +8,7 @@ https://github.com/sergiomartino/jQuery-LiveTweet
 (function($){
 	var settings = {      
 		'limit' : 5,		
-		'username' : 'jeresig',
+		'username' : 'servercobra',
 		'timeout' : 2000,		
 		'html_before' : '<ul>',
 		'html_tweets' : '<li>{text}<br>{date}</li>',
@@ -19,6 +19,7 @@ https://github.com/sergiomartino/jQuery-LiveTweet
 			return (this.use_relative_dates) ? $.fn.livetweet('relative_date',d) : $.fn.livetweet('format_date', d);
 		}		
 	};
+    console.log(settings.username);
 
 	var loc = {
 		'en' : {

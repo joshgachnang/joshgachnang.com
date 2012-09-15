@@ -28,7 +28,7 @@ def posts(request, category=None, page=1, posts_per_page=10):
     except Exception as e:
         logger.exception('Could not get Posts')
         return HttpResponseNotFound("Could not find any posts for page {}".format(page) )
-    return render_to_response('posts.html', template_data, context_instance=RequestContext(request))
+    return render_to_response('site_base.html', template_data, context_instance=RequestContext(request))
 
 def individual_post(request, url):
     template_data = {}

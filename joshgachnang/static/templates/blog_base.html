@@ -1,0 +1,55 @@
+<!-- blog -->
+<div id="blog">
+    <div class="clr">
+        <div class="top-bg1">
+            <div class="top-left">
+            <div><h1>Blog</h1></div>
+        </div> 
+    </div>
+    <div class="clr">
+        <div class="pat-bottomleft">&nbsp;</div>
+        <div class="pat-bottomright">&nbsp;</div>
+    </div>
+
+</div>
+
+<!--<div class="clr"><h6>
+    <span>A little about myself, and the development services I provide. </span> <br />If you are interested to know something about me then you can read the info below.</h6>
+</div>-->
+<!-- <div class="clr hline">&nbsp;</div> -->
+<div class="clr">
+
+    <div class="content">
+<!--     Content -->
+        {% for post in posts%}
+        <h2><a href="/p/{{ post.url }}">{{ post.title }}</a></h2>
+        <h5>Posted on {{ post.published }} by {{ post.author.display_name }} in {{ post.category }}.</h5>
+        <p>{{ post.excerpt }}</p>
+        <hr />
+        {% empty %}
+        <h2>No blog posts yet! Check back later!</h2>
+        {% endfor %}
+        <!--<h2>A brief info about me</h2>
+        <p>My name is Josh Gachnang. I’m currently a Computer Science student at the University of Wisconsin-Madison. I love developing with Python and Django. I hate doing repetitive things, which is why I have such a passion for server administration and automation. I’m a Google fan boy and love working with Amazon Web Services. I also love Minecraft. I manage personal servers for friends and a server hosting business. </p>
+        <h2>Stay Connected</h2>
+        <ul class="no-list social-list">
+            <li class="social-list-twitter"> <span>Twitter Profile</span> <a href="http://twitter.com/servercobra">http://twitter.com/ServerCobra</a> </li>
+            <li class="social-list-gplus"> <span>Google+ Profile</span> <a href="https://plus.google.com/117418434988851440505/">http://plug.google.com/</a> </li>
+        </ul>-->
+    </div>
+    <div class="right">
+<!--     Side bar -->
+        <h2>Personal Info</h2>
+        <div class="clr"><div class="input-box">Name </div><span>Josh Gachnang</span> </div>
+        <div class="clr"><div class="input-box">Date of birth </div><span> 11-13-1989</span></div>
+        <div class="clr"><div class="input-box">Location</div><span> Madison, WI</span></div>
+        <div class="clr"><div class="input-box">Phone</div> <span>+608.301.5887</span>  </div>
+        <div class="clr"><div class="input-box">E-mail</div><span><a href="mailto:josh@servercobra.com">Josh@ServerCobra.com</a></span>  </div>
+        <div class="clr"><div class="input-box">Website </div> <span><a href="http://servercobra.com">www.ServerCobra.com</a></span> </div> 
+
+    </div>
+    
+</div>
+    
+<div class="clr"></div>
+</div><!--blog end -->

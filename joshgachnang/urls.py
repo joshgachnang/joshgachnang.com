@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 urlpatterns += patterns('website.views',
-    url(r'^$', 'homepage'),
+    url(r'^$', 'posts'),
     url(r'^posts/$', 'posts'),
     url(r'^p/(?P<url>\w+)/$', 'individual_post'),
     url(r'^category/(?P<category>\w+)', 'posts'),

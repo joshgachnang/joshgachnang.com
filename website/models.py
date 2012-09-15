@@ -33,6 +33,8 @@ class Post(models.Model):
     author = models.ForeignKey(UserProfile)
     published = models.DateTimeField()
     comments_disabled = models.BooleanField(default=False)
+    in_nav_bar = models.BooleanField(default=False)
+    in_blog_posts = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.title

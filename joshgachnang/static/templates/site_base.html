@@ -76,6 +76,7 @@
                         <li class="resume">Resume</li>
                         <li class="services">Services</li>
                         <li class="portfolio">Portfolio</li>
+                        <li><a href="http://blog.joshgachnang.com">Blog</a></li>
                         <li class="contact">Contact</li>
                         </ul>
                     </div>
@@ -98,6 +99,7 @@
         {% include "resume.html" %}
         {% include "services.html" %}
         {% include "contact.html" %}
+        {% include "blog_base.html" %}
         {% block body %}
         {% endblock %}
         </div> <!--End card-pattern-->
@@ -132,7 +134,7 @@
 <!-- End Sidebar -->
 <footer>
 {% block footer %}
-<div id="footer"><h6>Copyright Josh Gachnang. <a href="http://github.com/pcsforeducation/joshgachnang">Source available on GitHub.</a></h6></div>
+<div id="footer"><h6>Copyright Josh Gachnang. <a href="http://github.com/pcsforeducation/joshgachnang.com">Source available on GitHub.</a></h6></div>
 {% endblock %}
 </footer>
 </body>

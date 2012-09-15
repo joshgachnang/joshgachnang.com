@@ -72,7 +72,7 @@
 	h1 { padding:22px 0px 0px 36px; }
 	h2 { padding:0px 0px 20px 0px;}
 	h6 { margin:0px 50px 0px 0px;}
-	#about .hline,#resume .hline, #services .hline, #portfolio .hline, #contact .hline  {
+	#about .hline,#resume .hline, #services .hline, #portfolio .hline, #contact .hline, #blog .hline  {
 	background-image:url(/static/images/themeforest/hline.png);
 	background-repeat:repeat-x;
 	background-position:left top;
@@ -140,7 +140,7 @@ footer {
 	}	
 	.logo-bg .logo { float:left; width:202px; padding:15px 0px 0px 50px; }
 	.logo-bg .logo:hover { cursor:pointer;}
-	#header .right { width:630px; float:right; }
+	#header .right { width:680px; float:right; }
 /* menu start*/
 	.menu_nav {padding-top:54px;}
 	ul.arrowunderline { list-style-type:none; margin:0; padding:0; }
@@ -270,7 +270,7 @@ footer {
 	margin-left:16px;
 	margin-top:50px;
 	padding:11px 10px 10px 11px;
-	background-image:url('../images/photo_background.png');
+	background-image:url('/static/images//photo_background.png');
 	background-repeat:no-repeat;	
 	}
 	#Slider{ height:290px; width:228px; }
@@ -293,8 +293,8 @@ footer {
 	background-repeat:no-repeat;
 	background-position:center left;
 	}	
-	ul.social-list li.social-list-twitter { background-image:url('../images/twitter_icon.png'); }		
-	ul.social-list li.social-list-facebook { background-image:url('../images/facebook_icon.png'); }	
+	ul.social-list li.social-list-twitter { background-image:url('/static/images//twitter_icon.png'); }		
+	ul.social-list li.social-list-facebook { background-image:url('/static/images//facebook_icon.png'); }	
 	ul.social-list li a, ul.social-list li span { display:block; font-weight:normal; }
 	ul.social-list li a { color:#de5a49; }
 	ul.social-list li a:hover { color:#B5B5B5; } 
@@ -363,9 +363,10 @@ footer {
 	#resume .resume-line { border-bottom:1px solid #dcdbdb; float:right; width:459px; }
 	#resume h5 { padding:5px 0px 5px 0px; }
 	#resume h5 span { font-weight:bold;  float:right; }
+	#resume h5 b {font-weight:bold;color:#727272;}
 	#resume li span { float:right; margin:-27px 0px 0px 0px; }
 	#resume .resume-top {clear:both; margin:0px 0px 0px 36px;}	
-	#resume .left { margin:0px 10px 0px 0px;  float:left; width:585px; padding:0px; }
+	#resume .left { margin:0px 10px 0px 0px;  float:left; width:485px; padding:0px; }
 	.social-list1 ul { margin:0px; padding:0px; list-style-type:none;}
 	.social-list1 li {
 	background-repeat:no-repeat;
@@ -373,7 +374,7 @@ footer {
 	text-align:justify;
 	}	
 	ul.social-list1 li a, ul.social-list1 li span { display:block; }
-	#resume .right { width:320px; height:auto;  float:left; margin:15px 10px 0px 15px; }
+	#resume .right { width:400px; height:auto;  float:left; margin:15px 10px 0px 15px; }
 	#resume .right h2 { padding-left:100px; }
 /* Skills diagram jQuery plugin CSS styles */ 
 	#diagram { float:left; width:321px; height:auto; padding:0px 0px 0px 20px; }
@@ -395,6 +396,90 @@ footer {
 	.skills .html { background:#93bf4e; }
 	.skills .php { background:#de6f96; }
 	.skills .sql { background:#9bcedd; }
+#skills, {
+    padding-bottom:10px;
+    margin-bottom:10px;
+    border-bottom:1px dotted #e3e2e2;
+}
+#skills1, #skills2 {
+    float: left;
+    margin-right: 74px;
+    width: 165px;
+}
+
+#skills ul  {
+    float:left;
+    width:237px;
+}
+
+#skills ul + ul {
+    margin-left:4px;
+}
+
+#skills  li {
+    color:#666;
+    font-size:12px;
+    font-weight:bold;
+    padding-bottom:3px;
+    float:left;
+    width:200px;
+}
+
+#skills  li span {
+    float:right;
+    width:113px;
+    height:17px;
+}
+
+#skills  li span.r1{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -56px}
+#skills  li span.r2{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -76px}
+#skills  li span.r3{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -36px}
+#skills  li span.r4{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -56px}
+#skills  li span.r5{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -76px}
+#skills  li span.r6{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -56px}
+#skills  li span.r7{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -76px}
+#skills  li span.r8{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -36px}
+#skills  li span.r9{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -76px}
+#skills  li span.r10{background: url(/static/images/rating-sprite.png) no-repeat scroll 0 -56px}
+
+.progress-label {
+    height:200px;
+    float:left;
+}
+.progress-label h4{
+/*     margin-top:4px; */
+/*     height:8px; */
+/*     padding:3px; */
+    margin-bottom:7px;
+    width:190px;
+/*     float:left; */
+    text-align:left;
+}
+.progress-bars{
+    width:200px;
+    float:right;
+}
+.progress{
+    float:right;clear:both;padding:3px 0;position:relative;width:180px;margin-bottom:15px;
+}
+.progress h4{
+    font-size:13px;margin-bottom:10px
+    
+}
+.progressBar{
+    position:relative;top:5px;background:url(/static/images/progressbar_bg_8.png) repeat-x right bottom;width:179px;height:8px;float:left;text-align:center;font-size:10px;border-left:1px #07a4cb solid;
+    
+}
+.progressValue{
+    position:relative;background:url(/static/images/progressbar_180_8.png) no-repeat right bottom;width:180px;height:8px;left:0;top:0;
+    
+}
+.progressValue span{
+    position:relative;top:-5px;text-align:center;font-weight:bold;font-size:9px;color:#fff;display:none;
+    
+}
+.progress .text{position:absolute;top:4px;margin-left:55px}
+
 /**********************  Resume  End  ******************************/
 
 /**********************  Services  start  ******************************/
@@ -713,6 +798,103 @@ footer {
     padding-top:40px;
 }
 /**********************  Contact  End  ******************************/
+
+/**********************  Blog  start  ******************************/
+    #blog { width:1020px; margin:0px 0px 0px -7px; clear:both; display:none;}
+    #blog h6 { padding:20px 0px 10px 36px; }
+    #blog .left { padding:20px 0px 0px 20px; float:left; width:276px; height:auto; margin:-55px 0px 0px 0px; }
+    #SliderBackground{
+    height:300px;
+    width:324px;
+    margin-left:16px;
+    margin-top:50px;
+    padding:11px 10px 10px 11px;
+    background-image:url('/static/images//photo_background.png');
+    background-repeat:no-repeat;    
+    }
+    #Slider{ height:290px; width:228px; }
+    #Slider img{ display:none; }
+    #Slider .default{ display:block; }
+    #SliderNav{
+    width:63px;
+    margin-left:35px;
+    height:11px;
+    display:inline-block;
+    padding-left:63.5px;
+    padding-right:63.5px;
+    float:left;
+    }
+    #blog .content { width:311px; float:left; margin:15px 5px 0px 40px; }
+    ul.social-list li{
+    min-height:30px;
+    padding-left:55px;
+    margin-bottom:10px;
+    background-repeat:no-repeat;
+    background-position:center left;
+    }   
+    ul.social-list li.social-list-twitter { background-image:url('/static/images//twitter_icon.png'); }     
+    ul.social-list li.social-list-facebook { background-image:url('/static/images//facebook_icon.png'); }   
+    ul.social-list li a, ul.social-list li span { display:block; font-weight:normal; }
+    ul.social-list li a { color:#de5a49; }
+    ul.social-list li a:hover { color:#B5B5B5; } 
+    #blog .right { width:280px; height:auto; float:left; margin:15px 0px 0px 55px; }
+    #blog .right p { float:left; }
+    #blog .right  span { float:right; width:55%; line-height:18px;}
+    #blog .right span a { text-decoration:none; }
+    #blog .right  span a:hover { color:#de5a49; text-decoration:none; }
+    .input-box {
+    float:left;
+    width:auto;
+    height:25px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    background-color:#de5a49;
+    background-repeat:repeat;
+    background-position:left top;
+    color:#FFFFFF;
+    padding:0px 10px 0px 10px;
+    margin-bottom:22px;
+    }
+    .box1 {
+    float:left;
+    width:auto;
+    height:25px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    background-color:#de5a49;
+    background-repeat:repeat;
+    background-position:left top;
+    color:#FFFFFF;
+    padding:0px 10px 0px 10px;
+    }
+    #blog .download {
+    float:left;
+    width:auto;
+    height:auto;
+    font-weight:600;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    background-color:#878785;
+    background-repeat:repeat;
+    background-position:left top;
+    color:#FFFFFF;
+    padding:4px 10px 4px 10px;
+    margin:30px 0px 0px 50px;
+    cursor:pointer; 
+    text-shadow:0 1px 0 #000;
+    border-style:none;
+    display:block;
+    -webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+    box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+    text-shadow:0 -1px 0 rgba(0,0,0,0.3);
+    }
+    #blog .download:hover { color:#FFFFFF; text-decoration:none; background-color:#de5a49; }
+/**********************  Blog  End  ******************************/
+    
 	.clr { clear:both; padding:0px; margin:0px; }
 	p{ margin:0px; padding:0px; }
 	.img-left { float:left; }
@@ -743,10 +925,10 @@ footer {
 	clear:both;
 	}		
 	.card-pattern  { width:712px;  height:auto; }
-	#home,#about,#resume,#services,#portfolio,#contact { width:727px; height:auto;  }
+	#home,#about,#resume,#services,#portfolio,#contact,#blog { width:727px; height:auto;  }
 	.top-bg1{ width:726px; height:68px; }
 	h1 { padding:22px 0px 0px 36px;  font-size:50px; }
-	#home .hline,#about .hline,#resume .hline, #services .hline, #portfolio .hline, #contact .hline  { width:654px; margin:10px 0px 30px 36px; }
+	#home .hline,#about .hline,#resume .hline, #services .hline, #portfolio .hline, #contact .hline, #blog .hline  { width:654px; margin:10px 0px 30px 36px; }
 	h6 { font-size:20px; }
 /* Main section end */
 
@@ -836,6 +1018,16 @@ footer {
 	#form .submitBtn{ margin-right:50px; }
 	#contact .right { clear:both; float:left; padding:0px 0px 0px 25px; }	
 /* contact ends */
+
+/* about starts */
+    #SliderBackground { margin-left:10px; }
+    #blog .left { margin:-60px 0px 0px 5px; }
+    #blog .content { width:400px; padding:10px 0px 0px 20px; margin:0px 0px 0px -30px; }
+    #blog .download { margin:30px 0px 0px 50px; }
+    #blog .right { width:300px; height:auto; clear:both; float:right; margin:0px 130px 0px 0px; padding-bottom:0px; }
+    #blog .right  span { width:55%; }
+    #blog .right span a { text-decoration:none; }
+/* about ends */
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -858,9 +1050,9 @@ footer {
 	clear:both;
 	}
 	.card-pattern { width:446px;  height:auto; }
-	#home,#about,#resume,#services,#portfolio,#contact { width:460px;  height:auto;  }
+	#home,#about,#resume,#services,#portfolio,#contact,#blog { width:460px;  height:auto;  }
 	.top-bg1 { width:459px; height:68px; }
-	#home .hline,#about .hline,#resume .hline,#services .hline, #portfolio .hline, #contact .hline { width:405px; margin:0px 0px 20px 30px; }	
+	#home .hline,#about .hline,#resume .hline,#services .hline, #portfolio .hline, #contact .hline,#blog .hline { width:405px; margin:0px 0px 20px 30px; }	
 	h1 { padding:22px 0px 0px 30px; font-size:45px; }
 	h6 { font-size:16px; margin:0px 30px 0px -6px;}
 /* Main section ends */
@@ -973,7 +1165,7 @@ footer {
 /* about ends */
 
 /* resume starts */
-	#resume .left { width:396px; margin:0px 0px 0px -3px; }
+	#resume .left { width:196px; margin:0px 0px 0px -3px; }
 	#resume .right { padding:20px 0px 0px 10px; clear:both; margin:0px; width:100%; }
 	#resume .right h2 { padding-left:120px; }
 	#diagram { clear:both; width:300px; margin:-50px 50px 0px 15px; }
@@ -1025,6 +1217,19 @@ footer {
 	#respond textarea { resize:vertical; width:90%; }
 	#form .submitBtn{ margin-right:40px; }
 /* contact ends */
+/* blog starts */
+    #blog .content { width:415px; padding:10px 0px 0px 20px; margin:20px 0px 0px 0px; clear:both; }
+    #blog .left { padding:15px 0px 0px 20px;  width:410px; height:auto; margin:0px; }
+    #blog .download { margin:30px 0px 0px 50px; }
+    #blog p { margin:0px 5px 0px 10px; }
+    ul.social-list li{ margin-left:10px; }
+    #blog h2 { margin:20px 0px 0px 10px; padding:0px 0px 18px 0px; }
+    #blog .right { width:381px;  clear:both; margin:-5px 0px 0px 20px; }
+    #blog .right  span { width:60%; }
+    #SliderBackground{ padding:10px 20px 10px 10px; margin:0px 0px 0px 90px; }
+    #blog .input-box { margin-left:10px; }
+    #blog .box1 { margin-left:10px; }
+/* blog ends */
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -1039,7 +1244,7 @@ footer {
 	}
 	#container { width:300px; }
 	.card-pattern  { width:286px; height:auto; }
-	#home,#about,#resume,#services,#portfolio,#contact { width:306px; }	
+	#home,#about,#resume,#services,#portfolio,#contact,#blog { width:306px; }	
 	.top-bg1{
 	background-image:url(/static/images/themeforest/clouds1.png);	
 	background-color:#de5a49;	
@@ -1052,8 +1257,8 @@ footer {
 	.pat-bottomleft { display:none; }
 	.pat-bottomright { display:none; }
 	.top-left { padding:0px 0px 0px 36px; width:212px; }
-	#about h1,#resume h1,#services h1, #portfolio h1, #contact h1 { padding:22px 0px 0px 0px; margin:0px 0px 0px -20px; font-size:35px; }
-	#about .hline,#resume .hline, #services .hline, #portfolio .hline, #contact .hline { width:256px; margin:0px 0px 30px 22px; }
+	#about h1,#resume h1,#services h1, #portfolio h1, #contact h1, #blog h1 { padding:22px 0px 0px 0px; margin:0px 0px 0px -20px; font-size:35px; }
+	#about .hline,#resume .hline, #services .hline, #portfolio .hline, #contact .hline, #blog .hline { width:256px; margin:0px 0px 30px 22px; }
 	h6 { font-size:14px; margin:0px 35px 0px -10px; }
 /* Main section ends */
 	
@@ -1242,4 +1447,12 @@ footer {
 	#contact .right  span { width:60%;}
 	#contact .right .twitter p { padding:0px 0px 0px 20px; } 
 /* contact ends */	
+/* blog content starts */
+    #blog .content { width:250px; padding:0px 5px 0px 25px; margin:-10px 0px 0px 0px; }    
+    #blog .left { padding:0px 0px 0px 21px; float:left; width:256px; height:400px; margin:0px; }
+    #blog .right { width:276px; height:auto; clear:both; margin:0px 0px 0px 25px; padding-bottom:0px; }
+    #blog .right  span { width:61%; }
+    #SliderBackground{ padding:11px 20px 10px 10px; margin:10px 20px 0px 9px; width:244px; }
+    #blog h2 { padding:10px 0px 18px 0px; }
+/* about content ends */
 }

@@ -138,58 +138,63 @@ $filter.find('a').click(function() {
 		  			Card Slides start
 ***************************************************/
 
-            $(function() {
+$(function() {
           
-				// on  click logo	ul.list li
-				$('ul.arrowunderline li,.menu > .item > .item_content >h2,.logo').hover(
-				)
+    // on  click logo	ul.list li
+    $('ul.arrowunderline li,.menu > .item > .item_content >h2,.logo').hover(
+    )
 	
 	
 	// on  click navigation	
-				.click(function(){
-					var $this = $(this);
-					var name = this.className;
-					$('#content').animate({marginTop:-900}, 500,function(){ // upside slide animation 
-					var $this = $(this);
+    .click(function(){
+        var $this = $(this);
+        var name = this.className;
+        $('#content').animate({marginTop:-900}, 500,function(){ // upside slide animation 
+        var $this = $(this);
 		
 		switch (name)
 			{
 			case 'home':
 			$('#home').show();
-			$('#about,#resume,#services,#portfolio,#contact').hide();
+			$('#about,#resume,#services,#portfolio,#contact,#blog').hide();
 			
 			break;
 			
 			case 'logo':
 			$('#home').show();
-			$('#about,#resume,#services,#portfolio,#contact').hide();
+			$('#about,#resume,#services,#portfolio,#contact,#blog').hide();
 			break;
 			
 			case 'about':
 			$('#about').show();
-			$('#resume,#home,#services,#portfolio,#contact').hide();
+			$('#resume,#home,#services,#portfolio,#contact,#blog').hide();
 			break;
 			
 			case 'resume':	 
 			$('#resume').show();
-			$('#about,#home,#services,#portfolio,#contact').hide();
+			$('#about,#home,#services,#portfolio,#contact,#blog').hide();
 			break;
 			
 			case 'services':	 
 			$('#services').show();
-			$('#about,#home,#resume,#portfolio,#contact').hide();
+			$('#about,#home,#resume,#portfolio,#contact,#blog').hide();
 			break;
 			
 			case 'portfolio':
 			$('#portfolio').show();
-			$('#about,#home,#services,#resume,#contact').hide();
+			$('#about,#home,#services,#resume,#contact,#blog').hide();
 			break;
 
 			
 			case 'contact':
 			$('#contact').show();
-			$('#about,#home,#services,#resume,#portfolio').hide();
+			$('#about,#home,#services,#resume,#portfolio,#blog').hide();
 			break;
+
+//             case 'blog':
+//             $('#blog').show();
+//             $('#about,#home,#services,#resume,#portfolio').hide();
+//             break;
 			
 		} // end switch 
 					
