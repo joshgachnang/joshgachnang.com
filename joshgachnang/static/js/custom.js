@@ -56,7 +56,7 @@ $('.twitter').livetweet({
 				});
 			
 			}
-
+            $('#home,#about,#resume,#services,#portfolio,#contact,#blog').show();
 });
 
 //prettyPhoto END
@@ -138,100 +138,100 @@ $filter.find('a').click(function() {
 		  			Card Slides start
 ***************************************************/
 
-$(function() {
-          
-    // on  click logo	ul.list li
-    $('ul.arrowunderline li,.menu > .item > .item_content >h2,.logo').hover(
-    )
-	
-	
-	// on  click navigation	
-    .click(function(){
-        var $this = $(this);
-        var name = this.className;
-        $('#content').animate({marginTop:-900}, 500,function(){ // upside slide animation 
-        var $this = $(this);
-		
-		switch (name)
-			{
-			case 'home':
-			$('#home').show();
-			$('#about,#resume,#services,#portfolio,#contact,#blog').hide();
-			
-			break;
-			
-			case 'logo':
-			$('#home').show();
-			$('#about,#resume,#services,#portfolio,#contact,#blog').hide();
-			break;
-			
-			case 'about':
-			$('#about').show();
-			$('#resume,#home,#services,#portfolio,#contact,#blog').hide();
-			break;
-			
-			case 'resume':	 
-			$('#resume').show();
-			$('#about,#home,#services,#portfolio,#contact,#blog').hide();
-			break;
-			
-			case 'services':	 
-			$('#services').show();
-			$('#about,#home,#resume,#portfolio,#contact,#blog').hide();
-			break;
-			
-			case 'portfolio':
-			$('#portfolio').show();
-			$('#about,#home,#services,#resume,#contact,#blog').hide();
-			break;
-
-			
-			case 'contact':
-			$('#contact').show();
-			$('#about,#home,#services,#resume,#portfolio,#blog').hide();
-			break;
-
-//             case 'blog':
-//             $('#blog').show();
-//             $('#about,#home,#services,#resume,#portfolio').hide();
-//             break;
-			
-		} // end switch 
-					
-				$this.animate({marginTop:108}, 500);  // Downside slide animation 
-				$this.animate({marginTop:96}, 500); //  slight animation 
-				$this.animate({marginTop:108}, 500); // reset to normal
-		
-					})	 
-
-				});
-
-            });
+// $(function() {
+//           
+//     // on  click logo	ul.list li
+//     $('ul.arrowunderline li,.menu > .item > .item_content >h2,.logo').hover(
+//     )
+// 	
+// 	
+// 	// on  click navigation	
+//     .click(function(){
+//         var $this = $(this);
+//         var name = this.className;
+//         $('#content').animate({marginTop:-900}, 500,function(){ // upside slide animation 
+//         var $this = $(this);
+// 		
+// 		switch (name)
+// 			{
+// 			case 'home':
+// 			$('#home').show();
+// 			$('#about,#resume,#services,#portfolio,#contact,#blog').hide();
+// 			
+// 			break;
+// 			
+// 			case 'logo':
+// 			$('#home').show();
+// 			$('#about,#resume,#services,#portfolio,#contact,#blog').hide();
+// 			break;
+// 			
+// 			case 'about':
+// 			$('#about').show();
+// 			$('#resume,#home,#services,#portfolio,#contact,#blog').hide();
+// 			break;
+// 			
+// 			case 'resume':	 
+// 			$('#resume').show();
+// 			$('#about,#home,#services,#portfolio,#contact,#blog').hide();
+// 			break;
+// 			
+// 			case 'services':	 
+// 			$('#services').show();
+// 			$('#about,#home,#resume,#portfolio,#contact,#blog').hide();
+// 			break;
+// 			
+// 			case 'portfolio':
+// 			$('#portfolio').show();
+// 			$('#about,#home,#services,#resume,#contact,#blog').hide();
+// 			break;
+// 
+// 			
+// 			case 'contact':
+// 			$('#contact').show();
+// 			$('#about,#home,#services,#resume,#portfolio,#blog').hide();
+// 			break;
+// 
+// //             case 'blog':
+// //             $('#blog').show();
+// //             $('#about,#home,#services,#resume,#portfolio').hide();
+// //             break;
+// 			
+// 		} // end switch 
+// 					
+// 				$this.animate({marginTop:108}, 500);  // Downside slide animation 
+// 				$this.animate({marginTop:96}, 500); //  slight animation 
+// 				$this.animate({marginTop:108}, 500); // reset to normal
+// 		
+// 					})	 
+// 
+// 				});
+// 
+//             });
 
   // Card Slides END
   
   
-  jQuery(document).ready(function(){ 
- $("ul.arrowunderline li").click(function () {
-			$('ul.arrowunderline  li').removeAttr('id');
-		//	$('ul.arrowunderline  li').css('color', '#b6b6b6')
-			$(this).attr('id', 'selected'  );
-		//	$(this).css('color', '#71be6f');
-    });
-     });
- 
- jQuery(document).ready(function($){
-
-	/* prepend menu icon */
-	$('#nav-wrap').prepend('<div id="menu-icon">Menu</div>');
-	
-	/* toggle nav */
-	$("#menu-icon").on("click", function(){
-		$("#nav").slideToggle();
-		$(this).toggleClass("active");
-	});
-
-});
+//   jQuery(document).ready(function(){ 
+//  $("ul.arrowunderline li").click(function () {
+// 			$('ul.arrowunderline  li').removeAttr('id');
+// 		//	$('ul.arrowunderline  li').css('color', '#b6b6b6')
+// 			$(this).attr('id', 'selected'  );
+// 		//	$(this).css('color', '#71be6f');
+//     });
+//      });
+//  
+//  jQuery(document).ready(function($){
+// 
+// 	/* prepend menu icon */
+// 	$('#nav-wrap').prepend('<div id="menu-icon">Menu</div>');
+// 	
+// 	/* toggle nav */
+// 	$("#menu-icon").on("click", function(){
+// 		$("#nav").slideToggle();
+// 		$(this).toggleClass("active");
+// 	});
+// 
+// });
 
 /***************************************************
 		  			Nivo Slider start

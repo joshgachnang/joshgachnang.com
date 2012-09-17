@@ -1,5 +1,5 @@
 
-from website.models import Post, Category
+from website.models import Post, Category, NavBar, NavBarItem
 import logging
 logger = logging.getLogger('views')
 
@@ -15,5 +15,10 @@ def site_context(request):
     logger.debug("Recent posts are {}".format(recent_posts))
     categories = Category.objects.all()
     logger.debug("All categories are {}".format(categories))
-    return {'recent_posts': recent_posts, 'categories': categories}
+    navbars = {}
+    print "Navbars all: ", NavBar.objects.all()
+    for navbar in NavBar.objects.all():
+        print  "Navbaritem:", NavBarItem.objects.filter(navbar=navbar).order_by('priority')
+        navbars[navbar.name] = NavBarItem.objects.filter(navbar=navbar).order_by('priority')
+    return {'recent_posts': recent_posts, 'categories': categories, 'navbars': navbars}
 

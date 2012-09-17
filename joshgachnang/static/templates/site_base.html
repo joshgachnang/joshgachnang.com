@@ -71,13 +71,23 @@
                 <div class="menu_nav">
                     <div id="nav-wrap">
                         <ul class="arrowunderline" id="nav">
+                        {% for nav in navbars.primary %}
+                            {% ifequal nav current_page %}
+                                <li id="selected"><a href="/{{ nav.url }}">{{ nav.display_name }}</a></li>
+                            {% else %}
+                                <li><a href="/{{ nav.url }}">{{ nav.display_name }}</a></li>
+                            {% endifequal %}
+                        {% empty %}
+                            <li id="selected"><a href="/">Home</a></li>
+                        {% endfor %}
+                        <!--
                         <li class="home" id="selected">Home</li>
                         <li class="about">About</li>
                         <li class="resume">Resume</li>
                         <li class="services">Services</li>
                         <li class="portfolio">Portfolio</li>
                         <li><a href="http://blog.joshgachnang.com">Blog</a></li>
-                        <li class="contact">Contact</li>
+                        <li class="contact">Contact</li>-->
                         </ul>
                     </div>
                 </div>
@@ -94,14 +104,12 @@
     <!--Card  -->
     <div id="content">
         <div class="card-pattern">
-        {% include "home.html" %}
-        {% include "about.html" %}
-        {% include "resume.html" %}
-        {% include "services.html" %}
-        {% include "contact.html" %}
-        {% include "blog_base.html" %}
+        
+<!--         Start Body -->
         {% block body %}
+<!--         Not Overriden -->
         {% endblock %}
+<!--         End Body -->
         </div> <!--End card-pattern-->
     <!--</div> --><!--End content-->
     <!-- End Body -->

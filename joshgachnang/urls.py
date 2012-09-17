@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-
+from joshgachnang.settings import settings
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -16,8 +16,12 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 urlpatterns += patterns('website.views',
+    url(r'^{}/$'.format(settings.default_blogs_page), 'blogs'),
+    url(r'^{}(?P<page>\d+)/$'.format(settings.default_blogs_page), 'blogs'),
     url(r'^$', 'posts'),
-    url(r'^posts/$', 'posts'),
-    url(r'^p/(?P<url>\w+)/$', 'individual_post'),
-    url(r'^category/(?P<category>\w+)', 'posts'),
+    url(r'^(?P<link>\w+)/$', 'posts'),
+    url(r'^(?P<link>\w+)/(?P<page>\d+)$', 'posts'),
+    #url(r'^posts/$', 'posts'),
+    #url(r'^p/(?P<url>\w+)/$', 'individual_post'),
+    #url(r'^category/(?P<category>\w+)', 'posts'),
 )
