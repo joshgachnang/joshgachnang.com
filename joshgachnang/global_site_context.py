@@ -12,9 +12,9 @@ def site_context(request):
     except Exception as e:
         logger.exception('Could not get recent Posts')
         recent_posts = None
-    logger.debug("Recent posts are {}".format(recent_posts))
+    logger.debug("Recent posts are {0}".format(recent_posts))
     categories = Category.objects.all()
-    logger.debug("All categories are {}".format(categories))
+    logger.debug("All categories are {0}".format(categories))
     navbars = {}
     print "Navbars all: ", NavBar.objects.all()
     for navbar in NavBar.objects.all():

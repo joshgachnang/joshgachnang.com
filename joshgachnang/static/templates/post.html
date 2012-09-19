@@ -1,3 +1,29 @@
 {% extends "site_base.html" %}
+{% block body %}
+<div id="blog">
+    <div class="clr">
+        <div class="top-bg1">
+            <div class="top-left">
+                <div><h1>{{ post.title }}</h1></div>
+            </div> 
+        </div>
+        <div class="clr">
+        <!--<div class="pat-bottomleft">&nbsp;</div>
+        <div class="pat-bottomright">&nbsp;</div>-->
+        
+    
+        <div class="blog_content">
+<!--         <div  class="clr"> -->
+        <h5>Posted by {{ post.author.display_name }} on {{ post.published }}</h5>
+        <div class="clr hline">&nbsp;</div>
+        {% autoescape off %}
+        {{ post.content }}
+        
+        {% endautoescape %}
+        </div>
+<!--         </div> -->
+    </div>
+</div>
+
 
 {% endblock %}

@@ -31,6 +31,7 @@ class Post(models.Model):
     title = models.CharField(max_length=64)
     url = models.CharField(max_length=64)
     content = models.TextField(blank=True, null=True)
+    content_preview = models.TextField(blank=True, null=True)
     site = models.ForeignKey(Site)
     category = models.ForeignKey(Category)
     author = models.ForeignKey(UserProfile)

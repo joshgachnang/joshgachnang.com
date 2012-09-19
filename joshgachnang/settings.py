@@ -136,7 +136,7 @@ INSTALLED_APPS = (
 # App specific settings
 posts_per_page = 10
 default_home_link = 'home'
-default_blogs_page = 'blogs'
+default_blogs_page = 'blog'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

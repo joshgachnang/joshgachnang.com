@@ -825,6 +825,8 @@ footer {
     float:left;
     }
     #blog .content { width:311px; float:left; margin:15px 5px 0px 40px; }
+    #blog .blog_content { width:940px; float:left; margin:15px 5px 0px 40px; }
+    #blog .blog_content {font-size:16px;}
     ul.social-list li{
     min-height:30px;
     padding-left:55px;
@@ -899,6 +901,7 @@ footer {
 	p{ margin:0px; padding:0px; }
 	.img-left { float:left; }
 	p, ul, ol, blockquote { margin-bottom:20px; }
+
 /*-------------------------------------------------------*/
 	/* Media Queries */
 /*-------------------------------------------------------*/
