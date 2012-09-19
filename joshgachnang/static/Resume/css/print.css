@@ -1,0 +1,116 @@
+body {	
+	margin:0; 
+	padding:0; 
+	line-height: 1.4em; 
+	word-spacing:1px; 
+	letter-spacing:0.2px; 
+	font: 13px Arial, Helvetica,"Lucida Grande", serif; 
+	color: #000;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2.h-border {
+	font-size: 24px;
+}	
+
+h3.h-border {
+	font-size: 20px;
+    color:#DE5A49;
+    margin-bottom:0px;
+}	
+
+#footer {
+	display: none;
+}
+
+#contact_us {
+	display: none;
+}
+.progressBar {
+	border: 0;
+}
+
+.progressValue span {
+	display: block;
+}
+
+ul.checklist, ul.list, ul.arrow {
+	list-style: square;
+	list-style-position: inside;
+}
+
+ul.checklist li, ul.list li, ul.arrow li {
+	padding-left: 0px;
+}
+.item {
+/*     margin-top:0px; */
+    margin-bottom:0px;
+}
+#front-info {
+    margin-top:0px;
+    height:100px;
+    width:100%;
+    float:left;
+}
+.textblock {
+    width:100%;
+    float:left;
+    padding-left:0px;
+    margin-left:0px;
+    background:white;
+    background-image:none;
+    background-size:0px;
+    text-align:center;
+   /* margin-right:40px;*/
+}
+h2.h-border {
+    height:2px;
+}
+.description1 {
+    font-size:12pt;
+    color:#505050;
+}
+.item p {
+    font-size:12pt;
+}
+.title {
+    color:black;
+}
+p {
+    color:#505050;
+}
+
+.theme-color, span.theme-color  {
+        color: #DE5A49;
+}
+
+a {
+    color: #DE5A49;
+}
+.main-photo {
+    display:none
+}
+.top-item {
+    margin-top:227px;
+}
+.divider-45{
+    height:10px;
+}
+.item {
+    margin-bottom:0px;
+}
+.print-wrap {
+    position:relative;
+    margin:0 auto;
+    /*replace 900px with your width*/
+    width:850px;
+}
+.jobtitle .theme-color {
+    color: #DE5A49;
+}
+#contact {
+    display:none;
+}
