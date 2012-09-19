@@ -75,7 +75,7 @@
                             {% ifequal nav current_page %}
                                 <li id="selected"><a href="/{{ nav.url }}">{{ nav.display_name }}</a></li>
                             {% else %}
-                                <li><a href="/{{ nav.url }}">{{ nav.display_name }}</a></li>
+                                <li><a href="/{{ nav.url }}" {% if nav.target %}target="{{ nav.target }}"{% endif %}>{{ nav.display_name }}</a></li>
                             {% endifequal %}
                         {% empty %}
                             <li id="selected"><a href="/">Home</a></li>

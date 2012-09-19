@@ -1,120 +1,343 @@
-{% extends "site_base.html" %}
-{% block body %}
-<!-- resume -->
-        <div id="resume">
-         <div class="clr">
-        <div class="top-bg1">
-          <div class="top-left">
-            <div><h1>Resume</h1></div>
-            </div> 
-          </div>
-         <div class="clr">
-        <div class="pat-bottomleft">&nbsp;</div>
-        <div class="pat-bottomright">&nbsp;</div>
-        </div>
-          </div>
-          <div class="clr"><h6>
-        <span>Experienced web developer and server administrator.</span> <br />  
-        Specialize in developing simple, scalable, and secure web apps and servers.</h6>
-          </div>
-            <div class="clr hline">&nbsp;</div>
-        <div class="resume-top">    
-          <div class="clr">
-            <div class="left">
-              <h2>Relevant Experience <span>&nbsp;</span></h2>
-              <h5><b>Djazzee (in progress)</b>: Git driven Django hosting platform, based on OpenStack</h5>
-              <h5><b>NetherRacks (in progress)</b>: Minecraft hosting, sharing infrastructure design with Djazzee, and Django-based control panel, based on OpenStack </h5>
-              <h5><b>www.ServerCobra.com</b>: Tech blog covering servers, Bash scripting, and Python/Django </h5>
-              <h5><b>Github</b>: www.github.com/pcsforeducation </h5>
-              <h2>Work Experience <span>&nbsp;</span></h2>
-                <h5>Hardware Support - UW Madison <span>Jan 2010 to present </span> </h5>
-                <p>Responsible for all labs, assist with networking and 2 server rooms. Leading project to deploy vPro to all desktops, plus management tools and documentation.</p>
-                <h5>Web Developer - The Young Progressives<span>Dec 2010 - July 2011</span></h5>
-                <p>Redesigned static website to utilize Wordpress. Massively grew social media presence and became authority in our market. Handled all IT functions.</p>
-                <h5>Rebel Green<span>May 2009 - April 2010</span></h5>
-                <p>Maintained and updated website and eCommerce (Network Solutions). Converted static site to dynamic for easier updating. Handled customer orders.</p>
-                <h5>HR/Operations Manager - Blatz Cafe<span>Feb 2009  - Dec 2009 </span></h5>
-                <p>Wrote proposal and started cafe from the ground up. Hired and managed 9 employees, maintained stock, and developed new products, managed IT.</p>
-                <h5>Server Admin/President - i2 Laboratories<span>Oct 2008 - Dec 2009 </span></h5>
-                <p>Built an EC2-based remote desktop solution. Started a non-profit focused on providing computers to the poor and to schools in Kenya. </p>
-
-
-                <h2>Education<span class="resume-line">&nbsp;</span></h2>
-                    <h5>B.S. Computer Science<span>2009-2013</span></h5>
-                        <p>University of Wisconsin - Madison</p>
-                    <h5>B.S. Management Information Systems (incomplete)<span>2008-2009</span></h5>
-                        <p>Milwauke School of Engineering</p>
-
-            </div>
-              <div class="right" >
-                    <div class="progress-label">
-                        <h4>Python</h4>
-                        <h4>Django</h4>
-                        <h4>Ubuntu Server</h4>
-                        <h4>Javascript/AJAX</h4>
-                        <h4>C/C++</h4>
-                        <h4>Java</h4>
-                    </div>
-                    <div class="progress-bars">
-                        <div class="progress">
-                            <div class="progressBar">
-                                <div class="progressValue" style="background-position: -68px 0px;">
-                                    <!-- The progress bar will automatically change when you change the value inside the span tag below. -->
-                                    <!-- You can also override the value in the title attribue. -->
-                                    <span title="">90%</span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!-- Theme Design by Arthur Gapusan from Themeforest.net -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>My Resume</title>
+		<!-- reset css -->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/reset.css" />
+		<!-- typography css -->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/typography.css" />
+		<!-- main css -->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" />	
+		<!-- print css -->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/print.css" media="print" />
+		<!-- include jQuery library -->
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.4.4.min.js"></script>
+		<!-- slider/fade script -->
+		<script src="{{ STATIC_URL }}js/jquery.bxSlider.min.js" type="text/javascript"></script>
+		<!-- vtip script -->
+		<script type="text/javascript" src="{{ STATIC_URL }}js/vtip.js"></script>
+		<!-- cufon script and fonts -->
+		<script type="text/javascript" src="{{ STATIC_URL }}js/cufon-yui.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/DilleniaUPC_400.font.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/Orator_Std_400.font.js"></script>
+		<!-- Initialize Background animation -->
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.bgpos.js"></script>
+		<!-- Initialize some scripts -->
+		<script type="text/javascript" src="{{ STATIC_URL }}js/init.js"></script>
+		<!-- jquery form script for contact form -->
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.form.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="container">
+				<div id="bg-container">
+					<div id="top-bg"></div>
+					<!-------------------------------------------------------------------------------->
+					<!--------------------------------- Main Column ---------------------------------->
+					<!-------------------------------------------------------------------------------->
+					<div class="main">
+						<div class="ribbon"></div>
+						<div class="content">
+							<!--============================================================================-->
+							<!--============================ Name and Job title ============================-->
+							<!--============================================================================-->	
+							<div id="front-info">
+                                <div class="print-wrap">
+                                    <h1><span class="theme-color">Josh</span> Gachnang</h1>
+                                    <div class="clear"></div>
+                                    <h2 class="jobtitle">Python/Django/SysAdmin</h2>
+                                    <h2 class="jobtitle"><span class="theme-color">Josh@ServerCobra.com  |  +608.301.5887  |  JoshGachnang.com</span></h2>
                                 </div>
-                            </div>
-                        </div>  
-                        <div class="progress">
-                            <div class="progressBar">
-                                <div class="progressValue" style="background-position: -36px 0px;">
-                                    <!-- The progress bar will automatically change when you change the value inside the span tag below. -->
-                                    <!-- You can also override the value in the title attribue. -->
-                                    <span title="">80%</span>
+							</div>
+<!-- 							<div class="clear"></div> -->
+							<div class="textblock">
+							    <div class="print-wrap">
+								<p>
+									I'm a <span class="theme-color">Python/Django developer</span> and <span class="theme-color">System Administrator</span> based in Madison, WI. I create <span class="theme-color">clean</span> and <span class="theme-color">simple</span> Django apps. I build <span class="theme-color">easy to use</span> servers. I <span class="theme-color">love</span> Minecraft.
+								</p>
+								</div>
+							</div> 
+							<!--============================================================================-->
+							<!--============================= Work Experience ==============================-->
+							<!--============================================================================-->	
+							<div class="item">	
+								<h2 class="h-border theme-color">Work Experience</h2>
+								
+								<div class="grid_4">
+									<h3 class="title">UW Madison - Computer Aided Engineering</h3>
+									<h3 class="description1">Hardware Support</h3>
+									<h4 class="description2">Jan 2009 - Present</h4>
+								</div>
+								<div class="grid_4">
+									<p>Reduced new machine deployment from approximately 3 months to 2 weeks. Manage 2 servers, support hardware/network/2 server rooms</p>
+								</div>
+								<div class="grid_4 last">
+									<ul class="list">
+										<li>vPro deployment and management</li>
+										<li>Manage Ubuntu and Windows server</li>									
+										<li>Create documentation</li>
+									</ul>
+								</div>
+								<div class="divider-45"></div>
+								<div class="grid_4">
+									<h3 class="title">Blatz Cafe - Milwaukee, WI</h3>
+									<h3 class="description1">HR/Operations/IT</h3>
+									<h4 class="description2">Feb 2009 - Dec 2009</h4>
+								</div>
+								<div class="grid_8 last">
+                                    <p>Founded a coffee shop with 2 other students. Created operations plan and management tools. Managed IT/Website. Created training handbook and lead hiring/firing. Successfully integrated coffee shop with MSOE Business cirriculum, giving many students real world experience.</p>
+								</div>
+								
+<!-- 								<div class="clear"></div> -->
+							</div> <!-- // .item -->
+							<!--============================================================================-->
+                            <!--============================= Personal Projects ============================-->
+                            <!--============================================================================-->
+							<div class="item">  
+                                <h2 class="h-border theme-color">Personal Projects</h2>
+                                <div class="grid_12">
+                                <h3><b>Github:</b> http://GitHub.com/PCsForEducation/</h3>
                                 </div>
-                            </div>
-                        </div>  
-                        <div class="progress">
-                            <div class="progressBar">
-                                <div class="progressValue" style="background-position: -52px 0px;">
-                                    <!-- The progress bar will automatically change when you change the value inside the span tag below. -->
-                                    <!-- You can also override the value in the title attribue. -->
-                                    <span title="">70%</span>
+                                <div class="grid_12">
+                                    <h3 class="title">PyRedstone</h3>
+                                    <h3 class="description1">Most extensive Minecraft library. Includes remote JSON API. Published on PyPi. Open source on GitHub.</h3>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progressBar">
-                                <div class="progressValue" style="background-position: -72px 0px;">
-                                    <!-- The progress bar will automatically change when you change the value inside the span tag below. -->
-                                    <!-- You can also override the value in the title attribue. -->
-                                    <span title="">100%</span>
+                                <div class="grid_12">
+                                    <h3 class="title">NetherRacks</h3>
+                                    <h3 class="description1">OpenStack-based Minecraft hosting and Django control panel. Currently in alpha testing.</h3>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progressBar">
-                                <div class="progressValue" style="background-position: -100px 0px;">
-                                    <!-- The progress bar will automatically change when you change the value inside the span tag below. -->
-                                    <!-- You can also override the value in the title attribue. -->
-                                    <span title="">50%</span>
+                                <div class="grid_12">
+                                    <h3 class="title">Djazzee</h3>
+                                    <h3 class="description1">Git driven Django hosting, leveraging OpenStack.</h3>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progressBar">
-                                <div class="progressValue" style="background-position: -120px 0px;">
-                                    <!-- The progress bar will automatically change when you change the value inside the span tag below. -->
-                                    <!-- You can also override the value in the title attribue. -->
-                                    <span title="">75%</span>
+                                <div class="grid_12">
+                                    <h3 class="title">DiveIntoPython.net</h3>
+                                    <h3 class="description1">Hosting the book and currently adding new chapters, updating book for Python 2.7</h3>
                                 </div>
+                                <div class="grid_12">
+                                    <h3 class="title">ServerCobra.com</h3>
+                                    <h3 class="description1">Tutorials on Python, Django, Ubuntu, and Minecraft for over 2 years.</h3>
+                                </div>
+                                <!--<div class="grid_4">
+                                    Cut new machine deployment from most of summer to approx. 2 weeks. Manage 2 servers, support hardware/network/2 server rooms
+                                </div>
+                                <div class="grid_4 last">
+                                    <h4>My Work:</h4>
+                                    <ul class="list">
+                                        <li>vPro development</li>
+                                        <li>Manage Ubuntu and Windows server</li>                                   
+                                        <li>Create documentation</li>
+                                    </ul>
+                                </div>-->
+                                
                             </div>
-                        </div>
-                    </div>
-              
-            </div>
-          </div>
-          </div>
-          <div class="clr"></div>
-        </div> <!--resume end -->   
-{% endblock %}
+							
+							
+							<!--============================================================================-->
+							<!--================================ Education =================================-->
+							<!--============================================================================-->
+							<div class="item">	
+								<h2 class="h-border theme-color">Education</h2>
+								
+                                <div class="grid_4">
+                                    <h3 class="title">University of Wisconsin - Madison</h3>
+                                    <h3 class="description1">BS in Computer Science</h3>
+                                    <h4 class="description2">Jan 2009 - May 2013</h4>
+                                </div>
+                                <div class="grid_4">
+                                    <p>
+                                        I focused my studies on Systems Development and gained a working knowledge of C/C++ and Java.
+                                    </p>
+                                </div>
+                                <div class="grid_4 last">
+                                    <ul class="arrow">
+                                        <li>OS/Networking</li>
+                                        <li>Security</li>                                   
+                                        <li>Database Development</li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                            </div> <!-- // .item -->
+							<!--============================================================================-->
+							<!--======================== Personal and Contacy Info =========================-->
+							<!--============================================================================-->
+							<div class="item">	
+                            <div id="contact">
+								<h2 class="h-border theme-color">Contact Info</h2>
+								
+								<div class="grid_4">
+									<ul class="no-bullet">
+										<li class="email">Josh@ServerCobra.com</li>									
+										<li class="phone">+608.301.5887</li>
+										<li class="twitter">@ServerCobra</li>
+<!-- 										<li class="address">30 Leicester Square. City, London. United Kingdom</li> -->
+									</ul>
+								</div>
+								<div class="grid_8 last">
+									<form action="sendemail.php" id="contact_us" method="post">
+										<div class="rowElem">
+											<div class="field">
+												<input type="text" name="Name" id="name" value="Name" />
+											</div>
+											<div class="error1">
+												Incorrect Name
+											</div>	
+										</div>
+										<div class="rowElem">
+											<div class="field">	
+												<input type="text" name="Email" id="email" value="Email" />
+											</div>
+											<div class="error2">
+												Incorrect Email
+											</div>	
+										</div>	
+										<div class="rowElem">
+											<div class="field">	
+												<input type="text" name="Subject" id="subject" value="Subject" />
+											</div>
+											<div class="error4">
+												Incorrect Subject
+											</div>	
+										</div>	
+										<div class="rowElem" id="textarea">
+											<div class="textarea">	
+												<textarea name="Message" rows="5" cols="25" id="message_input"></textarea>
+											</div>
+											<div class="error3">
+												Enter a Message
+											</div>	
+										</div>	
+										<div class="clear"></div>
+										<!--
+										<div id="submit">
+											<input type="submit" value="Send Message" name="submitButton"  class="form-submit" />
+										</div>
+										-->
+										<a id="submit" class="button-large"><span>Send Message</span></a>
+										<div class="clear"></div>
+									</form>
+									<div id="note">
+										<p class="textblock-small">Your message has been sent. Will get back to you as soon as possible. Thank you!</p>
+									</div>	
+								</div>
+								</div>
+								<div class="clear"></div>
+							</div> <!-- // .item -->
+							<!--============================================================================-->
+							<!--================================= Footer ===================================-->
+							<!--============================================================================-->
+							<div id="footer">
+								<div class="grid_6" id="footer-text">
+									&copy; 2012. Josh Gachnang. All rights reserved.
+								</div>
+								<div class="grid_6 last" id="footer-social">
+									<a href="#" class="grayscale vtip" title="Download Resume" >
+										<span><img src="{{ STATIC_URL }}images/icons/grayscale/save_download_32.png" alt="" /></span>
+									</a>
+									<!-- You can link you social network sites here -->
+									
+									<a href="http://twitter.com/servercobra" class="grayscale vtip" title="Twitter" >
+										<span><img src="{{ STATIC_URL }}images/icons/grayscale/twitter_32.png" alt="" /></span>
+									</a>
+									<!--<a href="#" class="grayscale vtip" title="Facebook" >
+										<span><img src="{{ STATIC_URL }}images/icons/grayscale/facebook_32.png" alt="" /></span>
+									</a>-->
+									<a href="http://www.linkedin.com/in/joshgachnang" class="grayscale vtip" title="LinkedIn" >
+										<span><img src="{{ STATIC_URL }}images/icons/grayscale/linkedin_32.png" alt="" /></span>
+									</a>
+									<!--<a href="#" class="grayscale vtip" title="DeviantArt" >
+										<span><img src="{{ STATIC_URL }}images/icons/grayscale/deviantart_32.png" alt="" /></span>
+									</a>-->
+									<!--<a href="#" class="grayscale vtip" title="Skype" >
+										<span><img src="{{ STATIC_URL }}images/icons/grayscale/skype_32.png" alt="" /></span>
+									</a>-->
+									
+									<!-- More Icons at images/icons/grayscale -->
+								</div>
+							</div> <!-- // #footer -->
+							<!-- Don't forget to clear the float before the closing tag of class ".content" div. -->
+							<div class="clear"></div>
+						</div> <!-- // .content -->
+					</div> <!-- // .main -->
+					
+					<!-------------------------------------------------------------------------------->
+					<!----------------------------------- SIDEBAR ------------------------------------>
+					<!-------------------------------------------------------------------------------->
+					<div class="sidebar">
+						<div class="content">
+							<!---------------------------------- Main Photo ---------------------------------->
+							<img src="{{ STATIC_URL }}images/photo.png" class="main-photo" />
+							<!------------------------------- Technical Skills ------------------------------->
+							<div class="item top-item">
+								<h3 class="h-border theme-color">Technical Skills</h3>
+								<!-- if you want to change the value of the progress bar, change it in the title attribute -->
+								
+								<ul class="no-style">
+									<li>
+										<div class="progress">
+											<h4>Python</h4>
+											<img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png">
+										</div>	
+									</li>
+									<li>
+										<div class="progress">
+											<h4>Django</h4>
+											<img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png">
+										</div>
+									</li>
+									<li>
+										<div class="progress">
+											<h4>Ubuntu/Debian Server</h4>
+											<img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png">
+										</div>
+									</li>
+									<li>
+										<div class="progress">
+											<h4>JQuery/AJAX</h4>
+											<img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png">
+										</div>
+									</li>
+									<li>
+										<div class="progress">
+											<h4>C/C++</h4>
+											<img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png">
+										</div>
+									</li>
+									<li>
+                                        <div class="progress">
+                                            <h4>Java</h4>
+                                            <img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png"><img class="redstar" src="{{ STATIC_URL }}images/RedStar.png">
+                                        </div>
+                                    </li>
+								</ul>
+							</div>		
+							<div class="item">
+                                <h3 class="h-border theme-color">Developing Skills</h3>
+                                <!-- if you want to change the value of the progress bar, change it in the title attribute -->
+                                <ul class="no-bullet">
+                                    <li>Chef</li>
+                                    <li>VMWare ESXi</li>
+                                    <li>Ruby</li>
+                                    <li>CentOS</li>
+                                    <li>OpenStack</li>
+                                    <li>Javascript</li>
+                                    
+                                </ul>
+							</div>
+							<!-- // .item -->
+						</div> <!-- // .content -->
+					</div> <!-- // .sidebar -->
+					
+						<!-- Bottom Background -->
+					<div class="bottom-bg"></div>
+					<div class="clear"></div>
+				</div> <!-- // #bg-container -->	
+			</div> <!-- // #container -->
+		</div> <!-- // #wrapper -->
+		<div class="clear"></div>
+		<!-- Initialize contact form script -->
+		<script type="text/javascript" src="js/init_form.js"></script>
+	</body>
+</html>

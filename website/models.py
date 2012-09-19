@@ -56,6 +56,7 @@ class NavBarItem(models.Model):
     display_name = models.CharField(max_length=64)
     navbar = models.ForeignKey(NavBar)
     priority = models.IntegerField()
+    target = models.CharField(max_length=64, blank=True, null=True, default=None)
     def __unicode__(self):
         return self.display_name
 
