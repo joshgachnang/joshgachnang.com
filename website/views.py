@@ -93,6 +93,6 @@ def blogs(request, page=1):
     else:
         template_data['prev_page'] = None
 
-    template_data['posts'] = Post.objects.filter(in_blog_posts=True).order_by('published')[start_post:end_post]
+    template_data['posts'] = Post.objects.filter(in_blog_posts=True).order_by('-published')[start_post:end_post]
     logger.debug("Found these blog posts: {0}".format(template_data['posts']))
     return render_to_response('blog_base.html', template_data, context_instance=RequestContext(request))
