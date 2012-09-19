@@ -3,6 +3,8 @@
 
 from fabric.api import *
 import os
+import time
+
 
 env.hosts = ['servercobra.com:6969']
 env.user = "nang"
@@ -13,17 +15,23 @@ def update_django_project():
     """ Updates the remote django project.
     """
     with cd(path):
+        sudo('git stash')
         sudo('git pull')
         with prefix('source ' + os.path.join(path, 'bin/activate')):
             sudo('pip install -r ' + os.path.join(path, 'requirements/requirements.txt'))
             sudo('python manage.py syncdb')
-            sudo('python manage.py migrate') # if you use south
+            #sudo('python manage.py migrate') # if you use south
             sudo('python manage.py collectstatic --noinput')
 
 def restart_webserver():
     """ Restarts remote nginx and uwsgi.
     """
-    sudo("restart joshgachnang")
+    sudo("stop joshgachnang")
+    # Give uwsgi time to shut down cleanly
+    time.sleep(2)
+    sudo("start joshgachnang")
+   
+    
     sudo("/etc/init.d/nginx reload")
 
 def deploy():
