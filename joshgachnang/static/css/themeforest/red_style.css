@@ -105,9 +105,9 @@ footer {
   text-align: center;
 /*   margin:10px auto; */
 }
-/*#footer h6 {
-    
-}*/
+#footer a {
+    color:#50A6C2;
+}
 #spinner {
   display:block;
   margin:20px auto;

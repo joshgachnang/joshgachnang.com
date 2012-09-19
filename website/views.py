@@ -12,6 +12,8 @@ def homepage(request):
     return render_to_response('site_base.html', template_data, context_instance=RequestContext(request))
 
 def posts(request, link=None, page=1):
+    # Try to coerce page to an int.
+    page = int(page)
     logger.debug("Trying to find object for link '{0}'.".format(link))
     template_data = {}
     if link is None:
@@ -54,6 +56,7 @@ def posts(request, link=None, page=1):
 
 def render_post(request, post):
     template_data = {}
+
     logger.debug("Getting Post with URL {0}".format(post.url))
     template_data['post'] = post
     logger.debug("Found Post {0}".format(template_data['post']))
@@ -76,13 +79,18 @@ def render_tag(request, tag):
 
 def blogs(request, page=1):
     logger.debug("Rendering blog pages.")
+    # Try coercing page to int
+    page = int(page)
     template_data = {}
 
     # Pagination
     start_post = (page - 1) * settings.posts_per_page
     # End post is 1 more than the actual number of the end post for slicing
     end_post = (page * settings.posts_per_page)
-    total_pages = (Post.objects.count() / settings.posts_per_page) + 1
+    if Post.objects.count() % settings.posts_per_page == 0:
+        total_pages = (Post.objects.count() / settings.posts_per_page)
+    else:
+        total_pages = (Post.objects.count() / settings.posts_per_page) + 1
     template_data['page'] = page
     if page < total_pages:
         template_data['next_page'] = page + 1

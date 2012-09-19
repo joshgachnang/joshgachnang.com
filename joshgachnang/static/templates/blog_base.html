@@ -36,10 +36,11 @@
         {% endfor %}
         <div id="footer">
         {% if prev_page %}
-        <a href="/blog/{{ prev_page }}">Previous Page</a>  |  
+        <a href="/blog/{{ prev_page }}/">Previous Page</a>  
+        {% if prev_page and next_page %}|{% endif %}
         {% endif %}
-        {% if prev_page %}
-        <a href="/blog/{{ next_page }}">Next Page</a>
+        {% if next_page %}
+        <a href="/blog/{{ next_page }}/">Next Page</a>
         {% endif %}
         </div>
         <!--<h2>A brief info about me</h2>
