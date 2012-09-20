@@ -10,6 +10,8 @@ urlpatterns = patterns('',
 )
 # All Posts,Categories, and Tags have a space in the root domain. Check for those last.
 urlpatterns += patterns('website.views',
+    url(r'^contact_send', 'contact_send'),
+    url(r'^contact_thanks', 'contact_thanks'),
     url(r'^{0}/$'.format(settings.default_blogs_page), 'blogs'),
     url(r'^{0}/(?P<page>\d+)/$'.format(settings.default_blogs_page), 'blogs'),
     url(r'^$', 'posts'),

@@ -1,6 +1,7 @@
 # Standard Python files
 *.pyc
 /media/*.png
+*production_settings.py
 # Editor files
 *~
 *.kate-swp

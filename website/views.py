@@ -1,9 +1,11 @@
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseServerError
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseServerError, HttpResponseForbidden, HttpResponseRedirect
 from django.shortcuts import render_to_response, redirect 
 from django.template import RequestContext
-from website.models import Post, Category, Tag
+from website.models import Post, Category, Tag, ContactEmail
 import logging
 import joshgachnang.settings as settings
+from forms import ContactForm
+from django.core.mail import send_mail
 
 logger = logging.getLogger('views')
 
@@ -104,3 +106,31 @@ def blogs(request, page=1):
     template_data['posts'] = Post.objects.filter(in_blog_posts=True).order_by('-published')[start_post:end_post]
     logger.debug("Found these blog posts: {0}".format(template_data['posts']))
     return render_to_response('blog_base.html', template_data, context_instance=RequestContext(request))
+
+def contact_send(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        
+        if form.is_valid():
+            print "Form: ", form.cleaned_data
+            contact_email = ContactEmail(**form.cleaned_data)
+            contact_email.save()
+            send_all_mail()
+            return HttpResponseRedirect('/contact_thanks/')
+        else:
+            return HttpResponseRedirect('/contact')
+    else:
+        return HttpResponseForbidden()
+
+def contact_thanks(request):
+    template_data = {}
+    return render_to_response('thanks.html', template_data, context_instance=RequestContext(request))
+
+def send_all_mail():
+    emails = ContactEmail.objects.filter(sent=False)
+    for email in emails:
+        subject = "{0} Contact from {1}: {2}".format(settings.site_name, email.sender, email.subject)
+        send_mail(subject=subject, message=email.message, from_email=email.sender_email, recipient_list=settings.emails, fail_silently=False)
+        email.sent = True
+        print email
+        email.save()

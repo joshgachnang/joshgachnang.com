@@ -176,10 +176,12 @@
 									</ul>
 								</div>
 								<div class="grid_8 last">
-									<form action="sendemail.php" id="contact_us" method="post">
-										<div class="rowElem">
+									<form action="/contact_send/" id="contact_us" method="post">{% csrf_token %}
+                                        {{ contact_form.as_p }}
+                                        <input type="submit" id="submit" class="button-large" />
+										<!--<div class="rowElem">
 											<div class="field">
-												<input type="text" name="Name" id="name" value="Name" />
+												<input type="text" name="sender" id="name" value="Name" />
 											</div>
 											<div class="error1">
 												Incorrect Name
@@ -187,7 +189,7 @@
 										</div>
 										<div class="rowElem">
 											<div class="field">	
-												<input type="text" name="Email" id="email" value="Email" />
+												<input type="text" name="sender_email" id="email" value="Email" />
 											</div>
 											<div class="error2">
 												Incorrect Email
@@ -195,7 +197,7 @@
 										</div>	
 										<div class="rowElem">
 											<div class="field">	
-												<input type="text" name="Subject" id="subject" value="Subject" />
+												<input type="text" name="subject" id="subject" value="Subject" />
 											</div>
 											<div class="error4">
 												Incorrect Subject
@@ -203,20 +205,20 @@
 										</div>	
 										<div class="rowElem" id="textarea">
 											<div class="textarea">	
-												<textarea name="Message" rows="5" cols="25" id="message_input"></textarea>
+												<textarea name="message" rows="5" cols="25" id="message_input"></textarea>
 											</div>
 											<div class="error3">
 												Enter a Message
 											</div>	
 										</div>	
 										<div class="clear"></div>
-										<!--
+										
 										<div id="submit">
 											<input type="submit" value="Send Message" name="submitButton"  class="form-submit" />
 										</div>
-										-->
-										<a id="submit" class="button-large"><span>Send Message</span></a>
-										<div class="clear"></div>
+										
+										
+										<div class="clear"></div>-->
 									</form>
 									<div id="note">
 										<p class="textblock-small">Your message has been sent. Will get back to you as soon as possible. Thank you!</p>

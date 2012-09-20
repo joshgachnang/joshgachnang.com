@@ -68,6 +68,12 @@ class NavBarItem(models.Model):
     def __unicode__(self):
         return self.display_name
 
+class ContactEmail(models.Model):
+    sender = models.CharField(max_length=100)
+    sender_email = models.EmailField()
+    subject = models.CharField(max_length=128)
+    message = models.TextField()
+    sent = models.BooleanField(default=False)
 
 # Add everything to the admin interface
 admin.site.register(Category)

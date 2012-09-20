@@ -2,6 +2,7 @@
 from website.models import Post, Category, NavBar, NavBarItem
 import logging
 logger = logging.getLogger('views')
+from website.forms import ContactForm
 
 def site_context(request):
     """ This context processor adds functionality that should be available on
@@ -20,5 +21,7 @@ def site_context(request):
     for navbar in NavBar.objects.all():
         print  "Navbaritem:", NavBarItem.objects.filter(navbar=navbar).order_by('priority')
         navbars[navbar.name] = NavBarItem.objects.filter(navbar=navbar).order_by('priority')
-    return {'recent_posts': recent_posts, 'categories': categories, 'navbars': navbars}
+    # Contact form
+    contact_form = ContactForm()
+    return {'recent_posts': recent_posts, 'categories': categories, 'navbars': navbars, 'contact_form': contact_form}
 

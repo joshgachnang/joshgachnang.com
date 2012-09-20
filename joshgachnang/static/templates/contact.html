@@ -28,9 +28,10 @@
 
                 <div class="boxBody">             
                     <div class="desc">
-            
-                        <form id="form" action="#" method="post">
-                        
+                        <form id="form" action="/contact_send/" method="post">{% csrf_token %}
+                            {{ contact_form.as_p }}
+                            <input type="submit" id="submit" />
+                        <!--
                         <div>
                             <label>Name <span class="font-11">(required)</span></label>
                             <input name="contactname" type="text" class="required" />
@@ -50,7 +51,7 @@
 
                         <div>
                             <input id="submitBtn" value="Submit"  name="submit" type="submit" class="submitBtn" />
-                        </div>
+                        </div>-->
 
                         </form> 
                     </div><!--END desc show--> 

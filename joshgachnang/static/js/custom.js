@@ -2,29 +2,7 @@
 // Contact Form Start
 // ******************************************************************************************
 		$(document).ready(function(){
-		$("#form").validate({
-			debug: false,
-			rules: {
-				name: "required",
-				phone:"digits",
-				message: "required",
-				email: {
-					required: true,
-					email: true
-				}
-			},
-			messages: {
-				name: "Please let us know who you are.",
-				email: "A valid email will help us get in touch with you."
-				
-			},
-			submitHandler: function(form) {
-				// do other stuff for a valid form
-				$.post('email_process.php', $("#form").serialize(), function(data) {
-					$('#post_message').html(data);
-				});
-			}
-		});
+		
 
 //Contact Form END
 
