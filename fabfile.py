@@ -11,6 +11,9 @@ env.user = "nang"
 
 path = '/ebs/www/joshgachnang/test.joshgachnang.com/joshgachnang.com'
 
+def put_files():
+    put('joshgachnang/production_settings.py', os.path.join(path, 'joshgachnang/'))
+
 def update_django_project():
     """ Updates the remote django project.
     """
@@ -38,4 +41,5 @@ def deploy():
     """ Deploy Django Project.
     """
     update_django_project()
+    put_files()
     restart_webserver()
