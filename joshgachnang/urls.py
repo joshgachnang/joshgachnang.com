@@ -11,7 +11,6 @@ urlpatterns = patterns('',
     url(r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/static/images/favicon.ico'}),
     url(r'^robots\.txt$', direct_to_template,
      {'template': 'robots.txt', 'mimetype': 'text/plain'}),
-,
 )
 # All Posts,Categories, and Tags have a space in the root domain. Check for those last.
 urlpatterns += patterns('website.views',
