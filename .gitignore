@@ -2,6 +2,7 @@
 *.pyc
 /media/*.png
 *production_settings.py
+*local_settings.py
 # Editor files
 *~
 *.kate-swp
