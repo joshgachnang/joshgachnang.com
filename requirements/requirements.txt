@@ -3,10 +3,12 @@ Kate-plugins==0.1.7
 Pinax==0.9a2
 argparse==1.2.1
 distribute==0.6.24
+django-ratchet==0.2.2
 pep8==0.6.1
 pyflakes==0.5.0
 pyjslint==0.3.3
 pyplete==0.0.2
 pysmell==0.7.3
+requests==0.14.0
 simplejson==2.6.1
 wsgiref==0.1.2
