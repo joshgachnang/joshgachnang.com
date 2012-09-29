@@ -150,6 +150,13 @@ except KeyError:
     pass
 EMAIL_PORT = 587
 
+RATCHET = {
+    'access_token': '662d429bdac149e39e686ad252b63647',
+    'environment': 'development' if DEBUG else 'production',
+    'branch': 'master',
+    'root': '/ebs/www/joshgachnang/test.joshgachnang.com/joshgachnang.com',
+}
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
